@@ -1,0 +1,18 @@
+{
+  "name": "chatserver",
+  "version": "1.0.0",
+  "description": "Server for the EAAA exam",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Morten Møller",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongodb": "^2.2.33",
+    "mongoose": "^4.13.7",
+    "socket.io": "^2.0.4"
+  }
+}
