@@ -1,0 +1,18 @@
+page-login {
+    .login-container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .login {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+
+            input {
+                text-align: center !important;
+            }
+        }
+    }
+}

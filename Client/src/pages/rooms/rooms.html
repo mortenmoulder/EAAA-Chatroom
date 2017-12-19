@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-navbar hideBackButton>
+        <ion-buttons left>
+            <button ion-button (click)="back()">
+                <ion-icon name="ios-arrow-back" style="font-size: 28px"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title>Welcome back, {{user.username}}</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <div class="rooms-container">
+        <h1>Rooms available to join</h1>
+        <ion-list class="rooms">
+            <button ion-item *ngFor="let room of rooms" (click)="selectRoom(room)">
+                {{ room.name }}
+            </button>
+        </ion-list>
+        <form (ngSubmit)="createRoom()">
+            <h1>Create room</h1>
+            <ion-input placeholder="Room name" name="name" [(ngModel)]="newRoom.name"></ion-input>
+            <button ion-button>Submit</button>
+        </form>
+    </div>
+</ion-content>

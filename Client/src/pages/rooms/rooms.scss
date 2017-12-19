@@ -1,0 +1,29 @@
+page-rooms {
+    .rooms-container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        * {
+            text-align: center;
+        }
+
+        .rooms {
+            button {
+                font-weight: bold !important;
+            }
+        }
+
+        ion-list {
+            margin-bottom: 30px;
+            max-height: 500px;
+            overflow-y: auto;
+        }
+
+        ion-input {
+            flex: 0 !important;
+        }
+    }
+}

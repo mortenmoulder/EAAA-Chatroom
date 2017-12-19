@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar hideBackButton>
+    <ion-buttons left>
+      <button ion-button (click)="back()">
+        <ion-icon name="ios-arrow-back" style="font-size: 28px"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Welcome back, {{user.username}}. You are typing in the chat room
+      <strong>{{selectedRoom.name}}</strong>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="chat-container">
+    <div class="messages">
+      <div *ngFor="let message of messages" class="message">
+        <span class="date">[{{message.date | date:"hh:mm:ss"}}]</span>
+        <span class="username">
+          <{{message.sentBy.username}}>
+        </span>
+        <span class="message">{{message.message}}</span>
+      </div>
+    </div>
+    <div class="users-container">
+      <h3>Users</h3>
+      <div>
+        <p class="user" *ngFor="let user of users">{{user.username}}</p>
+      </div>
+    </div>
+  </div>
+  <form (ngSubmit)="newMessage()" class="input-container">
+    <ion-input placeholder="Message" name="message" [(ngModel)]="myMessage.message"></ion-input>
+    <button ion-button>Submit</button>
+  </form>
+</ion-content>
