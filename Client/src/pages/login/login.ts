@@ -14,16 +14,10 @@ import { UserService } from "../../services/UserService";
 
 export class LoginPage {
     roomsPage = RoomsPage;
-    navController: NavController;
-    appStorage: Storage;
     user: User;
-    userService: UserService;
+    title: string = "Login page";
 
     constructor(public navCtrl: NavController, private storage: Storage, private UserService: UserService) {
-        this.navController = navCtrl;
-        this.appStorage = storage;
-        this.userService = UserService;
-
         storage.get('user').then((user: User) => {
             if (user) {
                 this.user = user;
@@ -32,10 +26,10 @@ export class LoginPage {
     }
 
     submit() {
-        this.userService.createUser(this.user).subscribe((user: User) => {
+        this.UserService.createUser(this.user).subscribe((user: User) => {
             this.user = user;
-            this.appStorage.set("user", this.user);
-            this.navController.push(RoomsPage);
+            this.storage.set("user", this.user);
+            this.navCtrl.push(RoomsPage);
         });
     }
 

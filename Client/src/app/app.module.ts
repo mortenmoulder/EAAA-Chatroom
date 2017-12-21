@@ -52,7 +52,8 @@ const config: SocketIoConfig = { url: 'http://localhost:8082', options: {} };
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     UserService,
     MessageService,
-    RoomService
+    RoomService,
+    Storage
   ]
 })
 export class AppModule { }
