@@ -36,5 +36,5 @@ To start the client, make sure ionic is installed first, then do:
 
   1. Make sure the project can be run (see “How to run it”)
   2. Open up another CLI and run this command:
-     1. npm test
+     1. `npm test`
   3. A browser window should open up with Jasmine, which should return all the tests as passed
